@@ -1,0 +1,371 @@
+.auth-container {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+}
+
+.auth-card {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease;
+}
+
+.join-card {
+  max-width: 600px;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-header h2 {
+  font-size: 1.75rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.auth-header p {
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon .icon {
+  position: absolute;
+  left: 12px;
+  font-size: 1.25rem;
+}
+
+.input-icon input,
+.input-icon select {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  border: 2px solid #e5e5e5;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.input-icon input:focus,
+.input-icon select:focus {
+  outline: none;
+  border-color: #2ce852;
+  box-shadow: 0 0 0 3px rgba(44, 232, 82, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.checkbox-label input {
+  cursor: pointer;
+}
+
+.forgot-link {
+  color: #2ce852;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-link:hover {
+  color: #287d00;
+}
+
+.btn-auth-primary {
+  background: #2ce852;
+  color: #1a1a1a;
+  padding: 0.875rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.btn-auth-primary:hover {
+  background: #287d00;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 125, 0, 0.3);
+}
+
+.auth-divider {
+  text-align: center;
+  position: relative;
+  margin: 0.5rem 0;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: calc(50% - 70px);
+  height: 1px;
+  background: #e5e5e5;
+}
+
+.auth-divider::before {
+  left: 0;
+}
+
+.auth-divider::after {
+  right: 0;
+}
+
+.auth-divider span {
+  background: white;
+  padding: 0 1rem;
+  color: #999;
+  font-size: 0.75rem;
+}
+
+.social-login {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-social {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #e5e5e5;
+  background: white;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-social:hover {
+  border-color: #2ce852;
+  background: #f9f9f9;
+}
+
+.user-type-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.type-option {
+  padding: 1rem;
+  border: 2px solid #e5e5e5;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.type-option.active {
+  border-color: #2ce852;
+  background: rgba(44, 232, 82, 0.05);
+}
+
+.type-option input {
+  display: none;
+}
+
+.type-icon {
+  font-size: 2rem;
+}
+
+.type-name {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.type-desc {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.terms-checkbox {
+  align-items: flex-start;
+}
+
+.terms-checkbox span {
+  line-height: 1.4;
+}
+
+.terms-checkbox a {
+  color: #2ce852;
+  text-decoration: none;
+}
+
+.terms-checkbox a:hover {
+  color: #287d00;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.auth-link {
+  color: #2ce852;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.auth-link:hover {
+  color: #287d00;
+}
+
+@media (max-width: 640px) {
+  .auth-container {
+    padding: 1rem;
+  }
+
+  .auth-card {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .user-type-selector {
+    flex-direction: column;
+  }
+
+  .social-login {
+    flex-direction: column;
+  }
+}
+
+/* Estilos para o campo de senha com botão de olho */
+.password-input {
+  position: relative;
+}
+
+.password-input input {
+  padding-right: 3rem !important;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  transition: color 0.3s ease;
+  font-size: 1.25rem;
+  z-index: 1;
+}
+
+.password-toggle-btn:hover {
+  color: #2ce852;
+}
+
+.password-toggle-btn:focus {
+  outline: none;
+  color: #287d00;
+}
+
+/* Ajuste para o input com ícone duplo (ícone fixo + botão) */
+.input-icon.password-input .icon {
+  z-index: 1;
+}
+
+/* Garantir que o input não sobreponha os botões */
+.input-icon.password-input input {
+  padding-left: 2.5rem;
+  width: 100%;
+}
+
+/* Animação suave para o ícone */
+.password-toggle-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.password-toggle-btn:hover svg {
+  transform: scale(0.9);
+}
+
+/* Estilos responsivos */
+@media (max-width: 640px) {
+  .password-toggle-btn {
+    font-size: 1rem;
+    right: 10px;
+  }
+  
+  .password-input input {
+    padding-right: 2.5rem !important;
+  }
+}
